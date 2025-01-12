@@ -1,0 +1,16 @@
+---/
+__pycache__/
+.idea/
+.vscode/
+.venv/
+.git/
+.github/
+.gitignore
+.env
+.env.sample
+Dockerfile
+docker-compose.yml
+README.md
+Makefile
+requirements.txt
+requirements-pipdeptree.txt
