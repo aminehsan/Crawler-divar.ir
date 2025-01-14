@@ -14,6 +14,11 @@ REDIS = Redis(
     retry_on_timeout=True
 )
 
-# class ...:
-#     def __init__(self) -> None:
-#     def ...(self) -> None:
+
+class Scraper:
+    def scrape_data(self, url: str) -> dict:
+        print('Successfully scraped the data.')
+        return {
+            'url': url,
+            'scrape': 'ok'
+        }

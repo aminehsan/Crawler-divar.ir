@@ -1,12 +1,13 @@
 from src import envs
 from src.celery import app
+from src.parser import Parser
 
-# from src.parser import ...
 
-
-# @app.task()
-# def ...(...: list) -> list:
-#     ...
+@app.task()
+def pars_test_data(data: dict) -> dict:
+    parser = Parser()
+    data = parser.pars_data(data=data)
+    return data
 
 
 if __name__ == '__main__':

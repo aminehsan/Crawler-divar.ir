@@ -1,12 +1,14 @@
 from src import envs
 from src.celery import app
+from src.scraper import Scraper
 
-# from src.scraper import ...
 
-
-# @app.task()
-# def ...(...: str) -> dict:
-#     ...
+@app.task()
+def scrape_test_data(url: str) -> dict:
+    scraper = Scraper()
+    data = scraper.scrape_data(url=url)
+    task = app.send_task('parser.pars_test_data', kwargs={'data': data}, queue='parser')
+    return task.id
 
 
 if __name__ == '__main__':

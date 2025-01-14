@@ -5,14 +5,14 @@ from . import models
 router = APIRouter()
 
 
-# @router.post('/.../...')
-# def ...(...: models.Input):
-#     task = app.send_task(
-#         name='scraper....',
-#         kwargs={'...': payload....},
-#         queue='scraper'
-#     )
-#     return {...}
+@router.post('/test')
+def get_test_data(payload: models.Input):
+    task = app.send_task(
+        name='scraper.scrape_test_data',
+        kwargs={'url': payload.url},
+        queue='scraper'
+    )
+    return {'id': task.id}
 
 
 @router.get('/result/{_id}')
