@@ -1,5 +1,6 @@
 amqp==5.3.1
 annotated-types==0.7.0
+beautifulsoup4==4.13.3
 billiard==4.2.1
 celery==5.4.0
 certifi==2024.12.14
@@ -22,6 +23,7 @@ python-dotenv==1.0.1
 redis==5.2.1
 requests==2.32.3
 six==1.17.0
+soupsieve==2.6
 typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.3.0
