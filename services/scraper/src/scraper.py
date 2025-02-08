@@ -25,8 +25,7 @@ class Scraper:
                 'User-Agent': 'Twitterbot/1'
             }
         )
-        result = response.text
-        soup = BeautifulSoup(result, 'html.parser')
+        soup = BeautifulSoup(response.text, 'html.parser')
         scripts = soup.find_all('script')
         script_str = str()
         for script in scripts:
@@ -46,7 +45,6 @@ class Scraper:
             data=json.dumps(payload)
         )
         assert response.status_code == 200
-        assert response.headers['Content-Type'] == 'application/json'
         result = response.json()
         return result
 
