@@ -1,7 +1,4 @@
 class Parser:
-    def pars_data(self, data: dict) -> dict:
-        print('Successfully parsed the data.')
-        data.update({
-            'pars': 'ok'
-        })
-        return data
+    @staticmethod
+    def pars_data(data_list: list) -> list:
+        return data_list

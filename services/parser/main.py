@@ -4,9 +4,9 @@ from src.parser import Parser
 
 
 @app.task()
-def pars_test_data(data: dict) -> dict:
+def pars_test_data(data_list: list) -> list:
     parser = Parser()
-    data = parser.pars_data(data=data)
+    data = parser.pars_data(data_list=data_list)
     return data
 
 
