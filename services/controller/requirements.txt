@@ -1,4 +1,0 @@
--r ../../shared/utils/requirements.txt
-#
-fastapi
-uvicorn

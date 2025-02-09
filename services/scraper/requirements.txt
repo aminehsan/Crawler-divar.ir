@@ -1,3 +1,0 @@
--r ../../shared/utils/requirements.txt
-#
-beautifulsoup4==4.13.3
