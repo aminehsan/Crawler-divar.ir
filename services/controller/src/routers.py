@@ -6,9 +6,9 @@ router = APIRouter()
 
 
 @router.post('/test')
-def get_test_data(payload: models.Input):
+def get_data(payload: models.Input):
     task = app.send_task(
-        name='scraper.scrape_test_data',
+        name='scraper.scrape_data',
         kwargs={'url': payload.url},
         queue='scraper'
     )
