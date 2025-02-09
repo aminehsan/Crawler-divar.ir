@@ -1,0 +1,245 @@
+{
+  "list_widgets": [
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "Ram 32g 14900L",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "gZGOq441",
+            "web_info": {
+              "title": "Ram 32g 14900L",
+              "district_persian": "ایرانشهر",
+              "city_persian": "تهران"
+            }
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/afra/webp_thumbnail/DB24AMWsXzPMu0FkJF0JnQ/ca6c7d5e-a634-4118-bc19-5eea5e38f4fb.webp",
+        "bottom_description_text": "در تهران",
+        "has_chat": true,
+        "red_text": "فروشگاه",
+        "middle_description_text": "۱,۴۵۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 5,
+        "top_description_text": "در حد نو",
+        "image_overlay_tag": {
+          "text": "پرداخت امن",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/success_secondary/v1/payment.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/success_secondary/v1/payment.png",
+            "icon_name": "PAYMENT",
+            "icon_color": "SUCCESS_SECONDARY"
+          }
+        },
+        "token": "gZGOq441"
+      },
+      "action_log": {
+        "server_side_info": {
+          "item_type": {
+            "type": "POST_ITEM"
+          },
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "gZGOq441",
+            "index": 0,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "parts-and-accessories"
+                },
+                "cities": [
+                  "1",
+                  "17"
+                ],
+                "has_secure_payment": true,
+                "query": "l",
+                "sort": {
+                  "value": "sort_date"
+                }
+              },
+              "last_post_sort_date": "1731413615166504",
+              "search_uid": "074cf24f-7830-4802-b74f-f47e8d88875e",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"category\":{\"str\":{\"value\":\"parts-and-accessories\"}}, \"has_secure_payment\":{\"boolean\":{\"value\":true}}}}",
+                "query": "l",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\", \"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "1",
+                  "17"
+                ],
+                "query_input_type": "TEXT"
+              }
+            },
+            "sort_date": "2024-07-04T13:31:22.648Z"
+          }
+        },
+        "enabled": true
+      }
+    },
+    {
+      "widget_type": "POST_ROW",
+      "data": {
+        "@type": "type.googleapis.com/widgets.PostRowData",
+        "title": "اکبند و قانونیiceriver KS3L (5 th) ماینر",
+        "action": {
+          "type": "VIEW_POST",
+          "payload": {
+            "@type": "type.googleapis.com/widgets.ViewPostPayload",
+            "token": "AZ7eLmv3",
+            "web_info": {
+              "title": "اکبند و قانونیiceriver KS3L (5 th) ماینر",
+              "district_persian": "زعفرانیه",
+              "city_persian": "تهران"
+            }
+          }
+        },
+        "image_url": "https://s100.divarcdn.com/static/photo/afra/webp_thumbnail/dJ74irUcYG08SIaHaVeWFA/eedf9b3f-e507-403a-8b0f-5b9f1b00aefe.webp",
+        "bottom_description_text": "در تهران",
+        "has_chat": true,
+        "red_text": "نردبان شده | فروشگاه",
+        "middle_description_text": "۹۵,۰۰۰,۰۰۰ تومان",
+        "has_divider": true,
+        "image_count": 1,
+        "top_description_text": "نو",
+        "image_overlay_tag": {
+          "text": "پرداخت امن",
+          "icon": {
+            "image_url_dark": "https://s100.divarcdn.com/static/imgs/widget-icons/dark/success_secondary/v1/payment.png",
+            "image_url_light": "https://s100.divarcdn.com/static/imgs/widget-icons/light/success_secondary/v1/payment.png",
+            "icon_name": "PAYMENT",
+            "icon_color": "SUCCESS_SECONDARY"
+          }
+        },
+        "token": "AZ7eLmv3"
+      },
+      "action_log": {
+        "server_side_info": {
+          "item_type": {
+            "type": "POST_ITEM"
+          },
+          "info": {
+            "@type": "type.googleapis.com/action_log.PostItemInfo",
+            "post_token": "AZ7eLmv3",
+            "index": 1,
+            "post_type": "SEARCH",
+            "list_type": "PAGE",
+            "source_page": "POST_LIST_PAGE",
+            "extra_data": {
+              "@type": "type.googleapis.com/action_log.PostItemInfo.SearchExtraData",
+              "jli": {
+                "category": {
+                  "value": "parts-and-accessories"
+                },
+                "cities": [
+                  "1",
+                  "17"
+                ],
+                "has_secure_payment": true,
+                "query": "l",
+                "sort": {
+                  "value": "sort_date"
+                }
+              },
+              "last_post_sort_date": "1731413615166504",
+              "search_uid": "074cf24f-7830-4802-b74f-f47e8d88875e",
+              "search_data": {
+                "form_data_json": "{\"data\":{\"category\":{\"str\":{\"value\":\"parts-and-accessories\"}}, \"has_secure_payment\":{\"boolean\":{\"value\":true}}}}",
+                "query": "l",
+                "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\", \"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+                "cities": [
+                  "1",
+                  "17"
+                ],
+                "query_input_type": "TEXT"
+              }
+            },
+            "sort_date": "2024-05-28T14:25:33Z"
+          }
+        },
+        "enabled": true
+      }
+    }
+  ],
+  "action_log": {
+    "server_side_info": {
+      "item_type": {
+        "type": "POST_LIST_LOAD_PAGE"
+      },
+      "info": {
+        "@type": "type.googleapis.com/action_log.PostListLoadPageInfo",
+        "cities": [
+          "1",
+          "17"
+        ],
+        "current_tab": "default",
+        "search_data": {
+          "form_data_json": "{\"data\":{\"category\":{\"str\":{\"value\":\"parts-and-accessories\"}}, \"has_secure_payment\":{\"boolean\":{\"value\":true}}}}",
+          "query": "l",
+          "server_payload_json": "{\"@type\":\"type.googleapis.com/widgets.SearchData.ServerPayload\", \"additional_form_data\":{\"data\":{\"sort\":{\"str\":{\"value\":\"sort_date\"}}}}}",
+          "cities": [
+            "1",
+            "17"
+          ],
+          "query_input_type": "TEXT"
+        },
+        "tokens": [
+          "gZGOq441",
+          "AZ7eLmv3"
+        ],
+        "has_next_page": true,
+        "page": 1,
+        "last_post_date_epoch": "-62135596800000000",
+        "search_id": "5520401ec0167ca8f6bbff67528dccc8",
+        "search_uid": "074cf24f-7830-4802-b74f-f47e8d88875e",
+        "source_view": "UNKNOWN",
+        "posts_metadata": [
+          {
+            "token": "gZGOq441",
+            "sort_date": "1720099882648000",
+            "source": "f"
+          },
+          {
+            "token": "AZ7eLmv3",
+            "sort_date": "1716906333000000",
+            "source": "f"
+          }
+        ],
+        "jli": {
+          "category": {
+            "value": "parts-and-accessories"
+          },
+          "cities": [
+            "1",
+            "17"
+          ],
+          "has_secure_payment": true,
+          "query": "l",
+          "sort": {
+            "value": "sort_date"
+          }
+        },
+        "search_layer": "fulltext_t1"
+      }
+    },
+    "enabled": true
+  },
+  "search_bar": {},
+  "pagination": {
+    "has_next_page": true,
+    "data": {
+      "@type": "type.googleapis.com/post_list.PaginationData",
+      "last_post_date": "0001-01-01T00:00:00Z",
+      "page": 2,
+      "layer_id": 2,
+      "search_uid": "074cf24f-7830-4802-b74f-f47e8d88875e"
+    }
+  },
+  "search_id": "5520401ec0167ca8f6bbff67528dccc8"
+}

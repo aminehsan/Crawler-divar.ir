@@ -1,0 +1,105 @@
+{
+  "nb": {
+    "serverSideInitialActionLog": {
+      "server_side_info": {
+        "info": {
+          "search_data": {
+            "form_data_json": "{\"data\":{\"building-age\":{\"number_range\":{\"minimum\":\"2\", \"maximum\":\"15\"}}, \"business-type\":{\"str\":{\"value\":\"personal\"}}, \"category\":{\"str\":{\"value\":\"apartment-sell\"}}, \"deed_type\":{\"repeated_string\":{\"value\":[\"single_page\"]}}, \"floor\":{\"number_range\":{\"minimum\":\"0\", \"maximum\":\"4\"}}, \"price\":{\"number_range\":{\"minimum\":\"1000000000\", \"maximum\":\"2000000000\"}}, \"rooms\":{\"repeated_string\":{\"value\":[\"دو\"]}}, \"size\":{\"number_range\":{\"minimum\":\"75\", \"maximum\":\"110\"}}}}",
+            "cities": [
+              "1"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "search": {
+    "searchData": {
+      "formData": {
+        "building-age": {
+          "number_range": {
+            "minimum": "2",
+            "maximum": "15"
+          }
+        },
+        "business-type": {
+          "str": {
+            "value": "personal"
+          }
+        },
+        "category": {
+          "str": {
+            "value": "apartment-sell"
+          }
+        },
+        "deed_type": {
+          "repeated_string": {
+            "value": [
+              "single_page"
+            ]
+          }
+        },
+        "floor": {
+          "number_range": {
+            "minimum": "0",
+            "maximum": "4"
+          }
+        },
+        "price": {
+          "number_range": {
+            "minimum": "1000000000",
+            "maximum": "2000000000"
+          }
+        },
+        "rooms": {
+          "repeated_string": {
+            "value": [
+              "دو"
+            ]
+          }
+        },
+        "size": {
+          "number_range": {
+            "minimum": "75",
+            "maximum": "110"
+          }
+        }
+      },
+      "serverPayload": {
+        "@type": "type.googleapis.com\u002Fwidgets.SearchData.ServerPayload",
+        "additional_form_data": {
+          "data": {
+            "sort": {
+              "str": {
+                "value": "sort_date"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultReducer": {
+    "ip": "5.114.131.45"
+  },
+  "city": {
+    "citySlug": "tehran",
+    "city": {
+      "id": 1,
+      "name": "تهران",
+      "slug": "tehran"
+    }
+  },
+  "multiCity": {
+    "selectedCities": [
+      {
+        "id": 1,
+        "name": "تهران",
+        "slug": "tehran",
+        "parent": 904,
+        "isProvince": false,
+        "relativeChildren": null
+      }
+    ]
+  }
+}

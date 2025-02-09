@@ -1,0 +1,85 @@
+{
+  "city_ids": [
+    "1"
+  ],
+  "pagination_data": {
+    "@type": "type.googleapis.com/post_list.PaginationData",
+    "last_post_date": "2025-01-09T11:12:41.214826Z",
+    "page": 1,
+    "layer_page": 1,
+    "search_uid": "541f7cf2-e563-4f5c-b926-a9e752cebca0"
+  },
+  "disable_recommendation": false,
+  "map_state": {
+    "camera_info": {
+      "bbox": {}
+    }
+  },
+  "search_data": {
+    "form_data": {
+      "data": {
+        "building-age": {
+          "number_range": {
+            "minimum": "2",
+            "maximum": "15"
+          }
+        },
+        "business-type": {
+          "str": {
+            "value": "personal"
+          }
+        },
+        "category": {
+          "str": {
+            "value": "apartment-sell"
+          }
+        },
+        "deed_type": {
+          "repeated_string": {
+            "value": [
+              "single_page"
+            ]
+          }
+        },
+        "floor": {
+          "number_range": {
+            "minimum": "0",
+            "maximum": "4"
+          }
+        },
+        "price": {
+          "number_range": {
+            "minimum": "1000000000",
+            "maximum": "2000000000"
+          }
+        },
+        "rooms": {
+          "repeated_string": {
+            "value": [
+              "دو"
+            ]
+          }
+        },
+        "size": {
+          "number_range": {
+            "minimum": "75",
+            "maximum": "110"
+          }
+        }
+      }
+    },
+    "server_payload": {
+      "@type": "type.googleapis.com/widgets.SearchData.ServerPayload",
+      "additional_form_data": {
+        "data": {
+          "sort": {
+            "str": {
+              "value": "sort_date"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

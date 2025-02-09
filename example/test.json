@@ -1,0 +1,54 @@
+{
+  "city_ids": [
+    "1"
+  ],
+  "pagination_data": {
+    "@type": "type.googleapis.com/post_list.PaginationData",
+    "last_post_date": "2025-01-28T12:10:24.994498Z",
+    "page": 1,
+    "layer_page": 1,
+    "search_uid": "1ef58ded-17d5-4230-abb1-56d665a8ef24"
+  },
+  "disable_recommendation": false,
+  "map_state": {
+    "camera_info": {
+      "bbox": {}
+    }
+  },
+  "search_data": {
+    "form_data": {
+      "data": {
+        "category": {
+          "str": {
+            "value": "apartment-sell"
+          }
+        },
+        "districts": {
+          "repeated_string": {
+            "value": [
+              "992"
+            ]
+          }
+        },
+        "price": {
+          "number_range": {
+            "minimum": "500000000",
+            "maximum": "8000000000"
+          }
+        }
+      }
+    },
+    "server_payload": {
+      "@type": "type.googleapis.com/widgets.SearchData.ServerPayload",
+      "additional_form_data": {
+        "data": {
+          "sort": {
+            "str": {
+              "value": "sort_date"
+            }
+          }
+        }
+      }
+    }
+  }
+}

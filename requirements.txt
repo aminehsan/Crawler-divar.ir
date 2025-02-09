@@ -1,0 +1,5 @@
+requests
+# fake-useragent==2.0.3
+# htmlmin==0.1.12
+# pydantic==2.9.2
+beautifulsoup4
