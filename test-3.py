@@ -56,12 +56,12 @@ def scraper_ads(url: str) -> dict:
 
 
 def parser_ads_list(ads_list: list) -> list:
-    pars_ads_list = list()
+    ads_pars_list = list()
     for ads in ads_list:
         for widget in ads['list_widgets']:
             if widget['widget_type'] == 'POST_ROW':
-                pars_ads_list.append(widget)
-    return pars_ads_list
+                ads_pars_list.append(widget)
+    return ads_pars_list
 
 
 if __name__ == '__main__':
@@ -69,5 +69,5 @@ if __name__ == '__main__':
     ads_list = list()
     for ads in scraper_ads(url=url):
         ads_list.append(ads)
-    result = parser_ads_list(ads_list=ads_list)
-    print(result)
+    ads_pars_list = parser_ads_list(ads_list=ads_list)
+    print(ads_pars_list)
