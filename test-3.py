@@ -36,7 +36,7 @@ def _get_data(payload: dict) -> dict:
     return response.json()
 
 
-def get_ads(url: str) -> dict:
+def scraper_ads(url: str) -> dict:
     assert 'https://divar.ir/s/' in url
     preloaded_state = _get_preloaded_state(url=url)
     search_data = preloaded_state['nb']['serverSideInitialActionLog']['server_side_info']['info']['search_data']
@@ -55,7 +55,19 @@ def get_ads(url: str) -> dict:
         yield ads
 
 
+def parser_ads_list(ads_list: list) -> list:
+    pars_ads_list = list()
+    for ads in ads_list:
+        for widget in ads['list_widgets']:
+            if widget['widget_type'] == 'POST_ROW':
+                pars_ads_list.append(widget)
+    return pars_ads_list
+
+
 if __name__ == '__main__':
-    url = 'https://divar.ir/s/tehran/buy-apartment?business-type=personal&price=-3000000000'
-    for ads in get_ads(url=url):
-        print(ads)
+    url = 'https://divar.ir/s/tehran/buy-apartment/hakimiyeh?price=-8000000000&business-type=personal'
+    ads_list = list()
+    for ads in scraper_ads(url=url):
+        ads_list.append(ads)
+    result = parser_ads_list(ads_list=ads_list)
+    print(result)
