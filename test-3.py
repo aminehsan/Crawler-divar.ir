@@ -37,17 +37,7 @@ def get_data(payload: dict) -> dict:
     return response.json()
 
 
-def get_data_generator(payload: dict) -> dict:
-    has_next_page = True
-    while has_next_page:
-        data = get_data(payload)
-        has_next_page = data['pagination'].get('has_next_page')
-        payload['pagination_data'] = data['pagination']['data']
-        yield data
-
-
-if __name__ == '__main__':
-    url = 'https://divar.ir/s/iran/computer-parts-accessories?q=l&cities=1%2C17&has_secure_payment=true'
+def get_data_generator(url: str) -> dict:
     preloaded_state = get_preloaded_state(url=url)
     search_data = preloaded_state['nb']['serverSideInitialActionLog']['server_side_info']['info']['search_data']
     payload = {
@@ -57,5 +47,15 @@ if __name__ == '__main__':
             'query': search_data.get('query')
         }
     }
-    for data in get_data_generator(payload=payload):
+    has_next_page = True
+    while has_next_page:
+        data = get_data(payload)
+        has_next_page = data['pagination'].get('has_next_page')
+        payload['pagination_data'] = data['pagination']['data']
+        yield data
+
+
+if __name__ == '__main__':
+    url = 'https://divar.ir/s/tehran/buy-apartment?business-type=personal&price=-3000000000'
+    for data in get_data_generator(url=url):
         print(data)
