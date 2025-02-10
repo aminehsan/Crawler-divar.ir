@@ -18,7 +18,6 @@ REDIS = Redis(
 class Scraper:
     @staticmethod
     def _get_preloaded_state(url: str) -> dict:
-        assert 'https://divar.ir/s/' in url
         response = requests.get(
             url=url,
             headers={
@@ -48,8 +47,9 @@ class Scraper:
         assert response.status_code == 200
         return response.json()
 
-    def get_data_generator(self, url: str) -> dict:
-        preloaded_state = self._get_preloaded_state(url=url)
+    @staticmethod
+    def get_data_generator(url: str) -> dict:
+        preloaded_state = Scraper._get_preloaded_state(url=url)
         search_data = preloaded_state['nb']['serverSideInitialActionLog']['server_side_info']['info']['search_data']
         payload = {
             'city_ids': search_data['cities'],
@@ -60,7 +60,7 @@ class Scraper:
         }
         has_next_page = True
         while has_next_page:
-            data = self._get_data(payload)
+            data = Scraper._get_data(payload)
             has_next_page = data['pagination'].get('has_next_page')
             payload['pagination_data'] = data['pagination']['data']
             yield data

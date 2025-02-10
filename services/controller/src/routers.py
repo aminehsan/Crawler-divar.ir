@@ -7,6 +7,7 @@ router = APIRouter()
 
 @router.post('/test')
 def get_data(payload: models.Input):
+    assert 'https://divar.ir/s/' in payload.url
     task = app.send_task(
         name='scraper.scrape_data',
         kwargs={'url': payload.url},

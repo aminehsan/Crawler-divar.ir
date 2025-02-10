@@ -5,9 +5,8 @@ from src.scraper import Scraper
 
 @app.task()
 def scrape_data(url: str) -> dict:
-    scraper = Scraper()
     data_list = list()
-    for data in scraper.get_data_generator(url=url):
+    for data in Scraper.get_data_generator(url=url):
         data_list.append(data)
     task = app.send_task('parser.pars_data', kwargs={'data_list': data_list}, queue='parser')
     return task.id
