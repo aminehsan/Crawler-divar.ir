@@ -4,10 +4,8 @@ from src.parser import Parser
 
 
 @app.task()
-def pars_data(data_list: list) -> list:
-    parser = Parser()
-    data = parser.pars_data(data_list=data_list)
-    return data
+def pars_ads_list(ads_list: list) -> list:
+    return Parser.pars_ads_list(ads_list=ads_list)
 
 
 if __name__ == '__main__':

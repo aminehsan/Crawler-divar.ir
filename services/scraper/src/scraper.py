@@ -17,6 +17,20 @@ REDIS = Redis(
 
 class Scraper:
     @staticmethod
+    def _get_data(payload: dict) -> dict:
+        response = requests.post(
+            url='https://api.divar.ir/v8/postlist/w/search',
+            headers={
+                'Accept': 'application/json',
+                'User-Agent': 'Twitterbot/1',
+                'Content-Type': 'application/json'
+            },
+            data=json.dumps(payload)
+        )
+        assert response.status_code == 200
+        return response.json()
+
+    @staticmethod
     def _get_preloaded_state(url: str) -> dict:
         response = requests.get(
             url=url,
@@ -34,21 +48,7 @@ class Scraper:
         return json.loads(re.search(r'__PRELOADED_STATE__\s*=\s*(\{.*?});', script_str).group(1))
 
     @staticmethod
-    def _get_data(payload: dict) -> dict:
-        response = requests.post(
-            url='https://api.divar.ir/v8/postlist/w/search',
-            headers={
-                'Accept': 'application/json',
-                'User-Agent': 'Twitterbot/1',
-                'Content-Type': 'application/json'
-            },
-            data=json.dumps(payload)
-        )
-        assert response.status_code == 200
-        return response.json()
-
-    @staticmethod
-    def get_data_generator(url: str) -> dict:
+    def get_ads(url: str) -> dict:
         preloaded_state = Scraper._get_preloaded_state(url=url)
         search_data = preloaded_state['nb']['serverSideInitialActionLog']['server_side_info']['info']['search_data']
         payload = {
@@ -60,7 +60,7 @@ class Scraper:
         }
         has_next_page = True
         while has_next_page:
-            data = Scraper._get_data(payload)
-            has_next_page = data['pagination'].get('has_next_page')
-            payload['pagination_data'] = data['pagination']['data']
-            yield data
+            ads = Scraper._get_data(payload)
+            has_next_page = ads['pagination'].get('has_next_page')
+            payload['pagination_data'] = ads['pagination']['data']
+            yield ads

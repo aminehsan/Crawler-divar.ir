@@ -1,4 +1,4 @@
 class Parser:
     @staticmethod
-    def pars_data(data_list: list) -> list:
-        return data_list
+    def pars_ads_list(ads_list: list) -> list:
+        return ads_list

@@ -5,11 +5,11 @@ from . import models
 router = APIRouter()
 
 
-@router.post('/test')
-def get_data(payload: models.Input):
+@router.post('/ads-list')
+def get_ads_list(payload: models.Input):
     assert 'https://divar.ir/s/' in payload.url
     task = app.send_task(
-        name='scraper.scrape_data',
+        name='scraper.scrape_ads_list',
         kwargs={'url': payload.url},
         queue='scraper'
     )

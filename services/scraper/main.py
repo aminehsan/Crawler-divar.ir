@@ -4,11 +4,11 @@ from src.scraper import Scraper
 
 
 @app.task()
-def scrape_data(url: str) -> dict:
-    data_list = list()
-    for data in Scraper.get_data_generator(url=url):
-        data_list.append(data)
-    task = app.send_task('parser.pars_data', kwargs={'data_list': data_list}, queue='parser')
+def scrape_ads_list(url: str) -> dict:
+    ads_list = list()
+    for ads in Scraper.get_ads(url=url):
+        ads_list.append(ads)
+    task = app.send_task('parser.pars_ads_list', kwargs={'ads_list': ads_list}, queue='parser')
     return task.id
 
 
