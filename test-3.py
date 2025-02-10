@@ -4,8 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def get_preloaded_state(url: str) -> dict:
-    assert 'https://divar.ir/s/' in url
+def _get_preloaded_state(url: str) -> dict:
     response = requests.get(
         url=url,
         headers={
@@ -23,7 +22,7 @@ def get_preloaded_state(url: str) -> dict:
     return json.loads(re.search(r'__PRELOADED_STATE__\s*=\s*(\{.*?});', script_str).group(1))
 
 
-def get_data(payload: dict) -> dict:
+def _get_data(payload: dict) -> dict:
     response = requests.post(
         url='https://api.divar.ir/v8/postlist/w/search',
         headers={
@@ -37,8 +36,9 @@ def get_data(payload: dict) -> dict:
     return response.json()
 
 
-def get_data_generator(url: str) -> dict:
-    preloaded_state = get_preloaded_state(url=url)
+def get_ads(url: str) -> dict:
+    assert 'https://divar.ir/s/' in url
+    preloaded_state = _get_preloaded_state(url=url)
     search_data = preloaded_state['nb']['serverSideInitialActionLog']['server_side_info']['info']['search_data']
     payload = {
         'city_ids': search_data['cities'],
@@ -49,13 +49,13 @@ def get_data_generator(url: str) -> dict:
     }
     has_next_page = True
     while has_next_page:
-        data = get_data(payload)
-        has_next_page = data['pagination'].get('has_next_page')
-        payload['pagination_data'] = data['pagination']['data']
-        yield data
+        ads = _get_data(payload)
+        has_next_page = ads['pagination'].get('has_next_page')
+        payload['pagination_data'] = ads['pagination']['data']
+        yield ads
 
 
 if __name__ == '__main__':
     url = 'https://divar.ir/s/tehran/buy-apartment?business-type=personal&price=-3000000000'
-    for data in get_data_generator(url=url):
-        print(data)
+    for ads in get_ads(url=url):
+        print(ads)
