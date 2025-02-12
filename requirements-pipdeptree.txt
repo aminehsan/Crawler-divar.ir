@@ -3,7 +3,7 @@ beautifulsoup4==4.13.3
   - typing_extensions [required: >=4.0.0, installed: 4.12.2]
 pipdeptree==2.25.0
   - packaging [required: >=24.1, installed: 24.2]
-Te  - pip [required: >=24.2, installed: 25.0.1]
+  - pip [required: >=24.2, installed: 25.0.1]
 requests==2.32.3
   - certifi [required: >=2017.4.17, installed: 2025.1.31]
   - charset-normalizer [required: >=2,<4, installed: 3.4.1]
