@@ -3,8 +3,6 @@ services:
     container_name: ${PROJECT_NAME}-broker
     image: rabbitmq:4-management-alpine
     restart: always
-    env_file:
-      - .env
     environment:
       - RABBITMQ_DEFAULT_USER=${BROKER_USERNAME}
       - RABBITMQ_DEFAULT_PASS=${BROKER_PASSWORD}
@@ -24,8 +22,6 @@ services:
     container_name: ${PROJECT_NAME}-flower
     image: mher/flower:2.0.1
     restart: always
-    env_file:
-      - .env
     ports:
       - ${FLOWER_PORT}:5555
     command: >
@@ -42,8 +38,6 @@ services:
     container_name: ${PROJECT_NAME}-storage
     image: redis:alpine3.20
     restart: always
-    env_file:
-      - .env
     ports:
       - ${STORAGE_PORT}:6379
     volumes:
@@ -61,10 +55,6 @@ services:
     container_name: ${PROJECT_NAME}-proxy
     image: teddysun/v2ray
     restart: always
-    env_file:
-      - .env
-    ports:
-      - ${PROXY_PORT}:8585
     volumes:
       - ${PROXY_CONFIG_PATH}:/etc/v2ray/config.json
 
@@ -73,7 +63,6 @@ services:
     build: ${CONTROLLER_BUILD_PATH}
     restart: always
     env_file:
-      - .env
       - ${CONTROLLER_ENV_PATH}
     ports:
       - ${CONTROLLER_PORT}:8000
@@ -88,7 +77,6 @@ services:
     build: ${PARSER_BUILD_PATH}
     restart: always
     env_file:
-      - .env
       - ${PARSER_ENV_PATH}
     volumes:
       - ${SHARED_PATH}:/app/shared
@@ -101,7 +89,6 @@ services:
     build: ${SCRAPER_BUILD_PATH}
     restart: always
     env_file:
-      - .env
       - ${SCRAPER_ENV_PATH}
     volumes:
       - ${SHARED_PATH}:/app/shared
