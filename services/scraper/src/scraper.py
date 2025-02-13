@@ -14,6 +14,8 @@ REDIS = Redis(
     retry_on_timeout=True
 )
 
+PROXIES = {'https': f'http://{envs.proxy.username}:{envs.proxy.password}@{envs.proxy.host}:{envs.proxy.port}'}
+
 
 class Scraper:
     @staticmethod
@@ -25,7 +27,8 @@ class Scraper:
                 'User-Agent': 'Twitterbot/1',
                 'Content-Type': 'application/json'
             },
-            data=json.dumps(payload)
+            data=json.dumps(payload),
+            proxies=PROXIES
         )
         assert response.status_code == 200
         return response.json()
@@ -37,7 +40,8 @@ class Scraper:
             headers={
                 'Accept': 'text/html',
                 'User-Agent': 'Twitterbot/1'
-            }
+            },
+            proxies=PROXIES
         )
         soup = BeautifulSoup(response.text, 'html.parser')
         script_str = str()

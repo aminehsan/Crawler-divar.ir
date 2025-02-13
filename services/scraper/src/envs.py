@@ -8,6 +8,16 @@ class ServiceSettings(BaseSettings):
         env_prefix = 'SERVICE_'
 
 
+class ProxySettings(BaseSettings):
+    host: str
+    port: int
+    username: str
+    password: str
+
+    class Config:
+        env_prefix = 'PROXY_'
+
+
 class BrokerSettings(BaseSettings):
     host: str
     port: int
@@ -28,5 +38,6 @@ class StorageSettings(BaseSettings):
 
 
 service = ServiceSettings()
+proxy = ProxySettings()
 broker = BrokerSettings()
 storage = StorageSettings()
