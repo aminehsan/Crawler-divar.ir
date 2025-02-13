@@ -57,6 +57,17 @@ services:
       timeout: 5s
       retries: 2
 
+  proxy:
+    container_name: ${PROJECT_NAME}-proxy
+    image: teddysun/v2ray
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - ${PROXY_PORT}:8585
+    volumes:
+      - ${PROXY_CONFIG_PATH}:/etc/v2ray/config.json
+
   controller:
     container_name: ${PROJECT_NAME}-controller
     build: ${CONTROLLER_BUILD_PATH}
