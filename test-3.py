@@ -3,6 +3,8 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+PROXIES = {'https': 'http://user:pass@host:port'}
+
 
 def _get_preloaded_state(url: str) -> dict:
     response = requests.get(
@@ -10,7 +12,8 @@ def _get_preloaded_state(url: str) -> dict:
         headers={
             'Accept': 'text/html',
             'User-Agent': 'Twitterbot/1'
-        }
+        },
+        proxies=PROXIES
     )
     soup = BeautifulSoup(response.text, 'html.parser')
     scripts = soup.find_all('script')
@@ -30,7 +33,8 @@ def _get_data(payload: dict) -> dict:
             'User-Agent': 'Twitterbot/1',
             'Content-Type': 'application/json'
         },
-        data=json.dumps(payload)
+        data=json.dumps(payload),
+        proxies=PROXIES
     )
     assert response.status_code == 200
     return response.json()
