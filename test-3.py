@@ -3,7 +3,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-PROXIES = {'https': 'http://user:pass@host:port'}
+PROXIES = {'https': 'http://username:password@host:port'}
 
 
 def _get_preloaded_state(url: str) -> dict:
